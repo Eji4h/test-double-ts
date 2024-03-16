@@ -211,7 +211,7 @@ describe('spaceship', () => {
       // Assert
       expect(weapon1.shoot).toHaveBeenCalledBefore(weapon2.shoot);
       expect(weapon2.shoot).toHaveBeenCalledBefore(weapon1.reload);
-      expect(weapon2.shoot).toHaveBeenCalledBefore(weapon2.reload);
+      expect(weapon1.reload).toHaveBeenCalledBefore(weapon2.reload);
     });
   });
 
